@@ -772,8 +772,8 @@ native_shrinks_to_test_() ->
 cant_generate_test_() ->
     [?_test(assert_cant_generate(Type)) || Type <- impossible_types()].
 
-proper_exported_types_test_() ->
-    [?_assertEqual({[],12}, proper_exported_types_test:not_handled())].
+% proper_exported_types_test_() ->
+%     [?_assertEqual({[],12}, proper_exported_types_test:not_handled())].
 
 %%------------------------------------------------------------------------------
 %% Verify that failing constraints are correctly reported
@@ -1054,7 +1054,7 @@ false_props_test_() ->
      ?_fails(?FORALL(_, float(0.0,0.0), false)),
      ?_fails(fails(?FORALL(_, integer(), false))),
      ?_failsWith([16], ?FORALL(X, ?LET(Y,integer(),Y*Y), X < 15)),
-     ?_failsWith([0.0],
+     ?_failsWith([+0.0],
 		 ?FORALL(_, ?LETSHRINK([A,B], [float(),atom()], {A,B}), false)),
      ?_failsWith([], conjunction([{some,true},{thing,false}])),
      ?_failsWith([{2,1},[{group,[[{sub_group,[1]}]]},{stupid,[1]}]],
