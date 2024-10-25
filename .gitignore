@@ -8,7 +8,6 @@ doc/*.css
 doc/*.html
 doc/*.png
 doc/edoc-info
-rebar3
 rebar.lock
 ebin
 _build/
