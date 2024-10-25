@@ -1,10 +1,4 @@
-[![Github Actions][github badge]][github]
-[![CodeCov][codecov badge]][codecov]
-[![Erlang Versions][erlang versions badge]][erlang]
-[![License][license badge]][license]
-[![Latest Release][release badge]][release]
-[![Hex PM][hex pm badge]][hex]
-[![Last Commit][commit badge]][commit]
+![PropEr OpenRiak Status](https://github.com/OpenRiak/proper/actions/workflows/erlang.yml/badge.svg?branch=openriak-3.2)
 
 Contact information and license
 -------------------------------
