@@ -1,4 +1,4 @@
-![PropEr OpenRiak Status](https://github.com/OpenRiak/proper/actions/workflows/erlang.yml/badge.svg?branch=openriak-3.2)
+![PropEr OpenRiak Status](https://github.com/OpenRiak/proper/actions/workflows/erlang.yml/badge.svg?branch=openriak-3.4)
 
 Contact information and license
 -------------------------------
