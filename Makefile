@@ -22,18 +22,8 @@
 
 .PHONY: default all compile dialyzer check_escripts test test-examples test-parallel doc clean distclean rebuild retest
 
-ifneq (,$(findstring Windows,$(OS)))
-    SEP := $(strip \)
-else
-    SEP := $(strip /)
-endif
+REBAR3 ?= ../riak/rebar3
 
-# A safe version of rebar3 that still supports Erlang/OTP 20.x and 21.x
-# Upgrade to a newer version when support for these versions is dropped.
-REBAR3_URL := https://github.com/erlang/rebar3/releases/download/3.15.2/rebar3
-REBAR3 ?= $(shell which rebar3 || which .$(SEP)rebar3 || \
-            (wget --no-check-certificate $(REBAR3_URL) && \
-	      chmod +x rebar3 && echo .$(SEP)rebar3))
 COVER ?= false
 
 default: compile
